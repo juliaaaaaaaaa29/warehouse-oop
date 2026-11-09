@@ -42,7 +42,7 @@ public:
 	void changeQuantity(int delta) {
 		int newVal = quantity.getValue() + delta;
 		if (newVal < 0) {
-			throw std::invalid_argument("Êîëè÷åñòâî íå ìîæåò áûòü îòðèöàòåëüíûì");
+			throw std::invalid_argument("ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã»Ã¬");
 		}
 		quantity.setValue(newVal);
 	}
@@ -51,20 +51,20 @@ public:
 class Clothing : public Product {
 public:
 	Clothing(const std::string& name, const Price& p, const Quantity& q, const Weight& w) :
-		Product(name, p, q, w, "îäåæäà") {}
+		Product(name, p, q, w, "Ã®Ã¤Ã¥Ã¦Ã¤Ã ") {}
 };
 
 class Food : public Product {
 public:
 	Food(const std::string& name, const Price& p, const Quantity& q, const Weight& w) :
-		Product(name, p, q, w, "åäà") {
+		Product(name, p, q, w, "Ã¥Ã¤Ã ") {
 	}
 };
 
 class Electronics : public Product {
 public:
 	Electronics(const std::string& name, const Price& p, const Quantity& q, const Weight& w) :
-		Product(name, p, q, w, "ýëåêòðîíèêà") {
+		Product(name, p, q, w, "Ã½Ã«Ã¥ÃªÃ²Ã°Ã®Ã­Ã¨ÃªÃ ") {
 	}
 };
 
@@ -80,12 +80,12 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Òåëåôîí " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Ìîäåëü: " << model << "\n";
+		std::cout << "Ã’Ã¥Ã«Ã¥Ã´Ã®Ã­ " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "ÃŒÃ®Ã¤Ã¥Ã«Ã¼: " << model << "\n";
 	}
 };
 
@@ -101,12 +101,12 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Íîóòáóê " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Ïàìÿòü Ãá: " << memoryGB << "\n";
+		std::cout << "ÃÃ®Ã³Ã²Ã¡Ã³Ãª " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "ÃÃ Ã¬Ã¿Ã²Ã¼ ÃƒÃ¡: " << memoryGB << "\n";
 	}
 };
 
@@ -122,19 +122,19 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Êóðòêà " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Ðàçìåð: " << size << "\n";
+		std::cout << "ÃŠÃ³Ã°Ã²ÃªÃ  " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "ÃÃ Ã§Ã¬Ã¥Ã°: " << size << "\n";
 	}
 };
 
 class  TShirt : public Clothing {
 	std::string color;
 public:
-	TShirt(const std::string& name, const Price& p, const Quantity& q, const Weight& w, std::string color = "áåëàÿ") :
+	TShirt(const std::string& name, const Price& p, const Quantity& q, const Weight& w, std::string color = "Ã¡Ã¥Ã«Ã Ã¿") :
 		Clothing(name, p, q, w), color(color) {
 	}
 
@@ -143,12 +143,12 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Ôóòáîëêà " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Öâåò: " << color << "\n";
+		std::cout << "Ã”Ã³Ã²Ã¡Ã®Ã«ÃªÃ  " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "Ã–Ã¢Ã¥Ã²: " << color << "\n";
 	}
 };
 
@@ -164,12 +164,12 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Ìîëîêî " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Æèðíîñòü: " << fatPercent << "%\n";
+		std::cout << "ÃŒÃ®Ã«Ã®ÃªÃ® " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "Ã†Ã¨Ã°Ã­Ã®Ã±Ã²Ã¼: " << fatPercent << "%\n";
 	}
 };
 
@@ -185,12 +185,12 @@ public:
 	}
 
 	void describe() const override {
-		std::cout << "Õëåá " << id << "\n";
-		std::cout << "Íàçâàíèå: " << name << "\n";
-		std::cout << "Öåíà: " << price.asRubles() << "\n";
-		std::cout << "Êîëè÷åñòâî: " << quantity.getValue() << "\n";
-		std::cout << "Âåñ: " << weight.asKg() << "\n";
-		std::cout << "Áåç ãëþòåíà: " << (isGlutenFree ? "Äà" : "Íåò") << "\n";
+		std::cout << "Ã•Ã«Ã¥Ã¡ " << id << "\n";
+		std::cout << "ÃÃ Ã§Ã¢Ã Ã­Ã¨Ã¥: " << name << "\n";
+		std::cout << "Ã–Ã¥Ã­Ã : " << price.asRubles() << "\n";
+		std::cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã®: " << quantity.getValue() << "\n";
+		std::cout << "Ã‚Ã¥Ã±: " << weight.asKg() << "\n";
+		std::cout << "ÃÃ¥Ã§ Ã£Ã«Ã¾Ã²Ã¥Ã­Ã : " << (isGlutenFree ? "Ã„Ã " : "ÃÃ¥Ã²") << "\n";
 	}
 };
 
