@@ -45,7 +45,7 @@ private:
 public:
     explicit Warehouse(size_t maxSize) : maxSize(maxSize) {
         if (maxSize == 0)
-            throw std::invalid_argument("Размер не может быть нулевым");
+            throw std::invalid_argument("ГђГ Г§Г¬ГҐГ° Г­ГҐ Г¬Г®Г¦ГҐГІ ГЎГ»ГІГј Г­ГіГ«ГҐГўГ»Г¬");
     }
 
     Warehouse(const Warehouse& other) : maxSize(other.maxSize) {
