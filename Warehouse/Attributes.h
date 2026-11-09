@@ -7,14 +7,14 @@ private:
 public:
 	Price(int val) :value(val) {
 		if (val < 0) {
-			throw std::invalid_argument("Öåíà íå ìîæåò áûòü îòðèöàòåëüíîé");
+			throw std::invalid_argument("Ã–Ã¥Ã­Ã  Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 		}
 	}
 	int getValue() const {
 		return value;
 	}
 	void setValue(int newVal) {
-		if (newVal < 0) throw std::invalid_argument("Öåíà íå ìîæåò áûòü îòðèöàòåëüíîé");
+		if (newVal < 0) throw std::invalid_argument("Ã–Ã¥Ã­Ã  Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 			value= newVal;
 	}
 	double asRubles() const {
@@ -28,19 +28,19 @@ private:
 public:
 	Quantity(int val) :value(val) {
 		if (val < 0) {
-			throw std::invalid_argument("Êîëè÷åñòâî íå ìîæåò áûòü îòðèöàòåëüíîé");
+			throw std::invalid_argument("ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 		}
 	}
 	int getValue() const {
 		return value;
 	}
 	void setValue(int newVal) {
-		if (newVal < 0) throw std::invalid_argument("Êîëè÷åñòâî íå ìîæåò áûòü îòðèöàòåëüíîé");
+		if (newVal < 0) throw std::invalid_argument("ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 			value = newVal;
 	}
 	void change(int delta) {
 		if (value + delta < 0) {
-			throw std::invalid_argument("Êîëè÷åñòâî íå ìîæåò ñòàòü îòðèöàòåëüíûì");
+			throw std::invalid_argument("ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã±Ã²Ã Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã»Ã¬");
 		}
 		value += delta;
 	}
@@ -52,14 +52,14 @@ private:
 public:
 	Weight(double gram) :grams(gram) {
 		if (gram < 0) {
-			throw std::invalid_argument("Âåñ íå ìîæåò áûòü îòðèöàòåëüíîé");
+			throw std::invalid_argument("Ã‚Ã¥Ã± Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 		}
 	}
 	int getValue() const {
 		return grams;
 	}
 	void setValue(double newGram) {
-		if (newGram < 0) throw std::invalid_argument("Âåñ íå ìîæåò áûòü îòðèöàòåëüíîé");
+		if (newGram < 0) throw std::invalid_argument("Ã‚Ã¥Ã± Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã¡Ã»Ã²Ã¼ Ã®Ã²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã®Ã©");
 			grams = newGram;
 	}
 	double asKg() const{
